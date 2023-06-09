@@ -163,8 +163,8 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
                         fit: BoxFit.cover,
                         image: Image.asset(
                           Theme.of(context).brightness == Brightness.dark
-                              ? 'assets/images/fqvhn_1.png'
-                              : 'assets/images/mmfwi_2.png',
+                              ? 'assets/images/1.png'
+                              : 'assets/images/2.png',
                         ).image,
                       ),
                       shape: BoxShape.circle,
