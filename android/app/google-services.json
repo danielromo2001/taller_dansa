@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "815687075784",
+    "project_id": "tallerdansa-2307",
+    "storage_bucket": "tallerdansa-2307.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:815687075784:android:087399950c15318706a2fd",
+        "android_client_info": {
+          "package_name": "taller.daniel"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "815687075784-e32ii6a0uv70sb3mgdn00fl6cq8v1inh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "taller.daniel",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "815687075784-lb6010f8t0fainc1hgmq00b44qlvvh5u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArbTK5sTMT2VQ1GoGM8Rmxn6Oo7ObKpkE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "815687075784-lb6010f8t0fainc1hgmq00b44qlvvh5u.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "815687075784-qq19t676mc22d7o711b16nlfnf6c4u7a.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "taller.daniel"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
