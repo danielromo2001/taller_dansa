@@ -96,8 +96,8 @@ class _RegistrarMecanicoWidgetState extends State<RegistrarMecanicoWidget> {
                         fit: BoxFit.cover,
                         image: Image.asset(
                           Theme.of(context).brightness == Brightness.dark
-                              ? 'assets/images/1.png'
-                              : 'assets/images/2.png',
+                              ? 'assets/images/mcatd_1.png'
+                              : 'assets/images/9hsjc_2.png',
                         ).image,
                       ),
                       shape: BoxShape.circle,
@@ -244,6 +244,7 @@ class _RegistrarMecanicoWidgetState extends State<RegistrarMecanicoWidget> {
                               await MecanicosRecord.collection
                                   .doc()
                                   .set(mecanicosCreateData);
+                              context.safePop();
                             },
                             text: 'Guardar',
                             options: FFButtonOptions(
