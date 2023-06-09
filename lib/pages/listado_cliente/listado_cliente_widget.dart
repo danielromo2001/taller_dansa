@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+
 import 'listado_cliente_model.dart';
 export 'listado_cliente_model.dart';
 
@@ -26,7 +27,6 @@ class _ListadoClienteWidgetState extends State<ListadoClienteWidget> {
     super.initState();
     _model = createModel(context, () => ListadoClienteModel());
 
-    _model.textController ??= TextEditingController();
     WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
   }
 
@@ -49,13 +49,13 @@ class _ListadoClienteWidgetState extends State<ListadoClienteWidget> {
           automaticallyImplyLeading: false,
           leading: FlutterFlowIconButton(
             borderColor: Colors.transparent,
-            borderRadius: 30.0,
-            borderWidth: 1.0,
-            buttonSize: 60.0,
+            borderRadius: 30,
+            borderWidth: 1,
+            buttonSize: 60,
             icon: Icon(
               Icons.arrow_back_rounded,
               color: Colors.white,
-              size: 30.0,
+              size: 30,
             ),
             onPressed: () async {
               context.pop();
@@ -66,12 +66,12 @@ class _ListadoClienteWidgetState extends State<ListadoClienteWidget> {
             style: FlutterFlowTheme.of(context).headlineMedium.override(
                   fontFamily: 'Poppins',
                   color: Colors.white,
-                  fontSize: 22.0,
+                  fontSize: 22,
                 ),
           ),
           actions: [],
           centerTitle: true,
-          elevation: 2.0,
+          elevation: 2,
         ),
         body: SafeArea(
           top: true,
@@ -79,77 +79,7 @@ class _ListadoClienteWidgetState extends State<ListadoClienteWidget> {
             mainAxisSize: MainAxisSize.max,
             children: [
               Container(
-                width: MediaQuery.of(context).size.width * 1.0,
-                height: MediaQuery.of(context).size.height * 0.1,
-                decoration: BoxDecoration(
-                  color: FlutterFlowTheme.of(context).secondaryBackground,
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Expanded(
-                      child: Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(8.0, 0.0, 50.0, 0.0),
-                        child: TextFormField(
-                          controller: _model.textController,
-                          autofocus: true,
-                          obscureText: false,
-                          decoration: InputDecoration(
-                            labelText: 'Buscar',
-                            labelStyle:
-                                FlutterFlowTheme.of(context).labelMedium,
-                            hintStyle: FlutterFlowTheme.of(context).labelMedium,
-                            enabledBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: FlutterFlowTheme.of(context).alternate,
-                                width: 2.0,
-                              ),
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                            focusedBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: FlutterFlowTheme.of(context).primary,
-                                width: 2.0,
-                              ),
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                            errorBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: FlutterFlowTheme.of(context).error,
-                                width: 2.0,
-                              ),
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                            focusedErrorBorder: UnderlineInputBorder(
-                              borderSide: BorderSide(
-                                color: FlutterFlowTheme.of(context).error,
-                                width: 2.0,
-                              ),
-                              borderRadius: BorderRadius.circular(8.0),
-                            ),
-                          ),
-                          style: FlutterFlowTheme.of(context).bodyMedium,
-                          textAlign: TextAlign.center,
-                          validator: _model.textControllerValidator
-                              .asValidator(context),
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding:
-                          EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 20.0, 0.0),
-                      child: Icon(
-                        Icons.search,
-                        color: FlutterFlowTheme.of(context).primary,
-                        size: 40.0,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                width: MediaQuery.of(context).size.width * 1.0,
+                width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height * 0.83,
                 decoration: BoxDecoration(
                   color: FlutterFlowTheme.of(context).secondaryBackground,
@@ -161,11 +91,11 @@ class _ListadoClienteWidgetState extends State<ListadoClienteWidget> {
                     if (!snapshot.hasData) {
                       return Center(
                         child: SizedBox(
-                          width: 50.0,
-                          height: 50.0,
+                          width: 50,
+                          height: 50,
                           child: SpinKitDualRing(
                             color: Colors.black,
-                            size: 50.0,
+                            size: 50,
                           ),
                         ),
                       );
@@ -176,9 +106,9 @@ class _ListadoClienteWidgetState extends State<ListadoClienteWidget> {
                       padding: EdgeInsets.zero,
                       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 2,
-                        crossAxisSpacing: 10.0,
-                        mainAxisSpacing: 10.0,
-                        childAspectRatio: 1.0,
+                        crossAxisSpacing: 10,
+                        mainAxisSpacing: 10,
+                        childAspectRatio: 1,
                       ),
                       scrollDirection: Axis.vertical,
                       itemCount: gridViewListaClientesRecordList.length,
@@ -188,9 +118,9 @@ class _ListadoClienteWidgetState extends State<ListadoClienteWidget> {
                         return Card(
                           clipBehavior: Clip.antiAliasWithSaveLayer,
                           color: Color(0xFF85E591),
-                          elevation: 4.0,
+                          elevation: 4,
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8.0),
+                            borderRadius: BorderRadius.circular(8),
                           ),
                           child: SingleChildScrollView(
                             child: Column(
@@ -198,10 +128,10 @@ class _ListadoClienteWidgetState extends State<ListadoClienteWidget> {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Align(
-                                  alignment: AlignmentDirectional(-1.0, 0.0),
+                                  alignment: AlignmentDirectional(-1, 0),
                                   child: Padding(
                                     padding: EdgeInsetsDirectional.fromSTEB(
-                                        10.0, 15.0, 0.0, 0.0),
+                                        10, 15, 0, 0),
                                     child: Text(
                                       gridViewListaClientesRecord.nombre,
                                       style: FlutterFlowTheme.of(context)
@@ -211,10 +141,10 @@ class _ListadoClienteWidgetState extends State<ListadoClienteWidget> {
                                 ),
                                 Flexible(
                                   child: Align(
-                                    alignment: AlignmentDirectional(-1.0, -1.0),
+                                    alignment: AlignmentDirectional(-1, -1),
                                     child: Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          10.0, 0.0, 0.0, 0.0),
+                                          10, 0, 0, 0),
                                       child: Text(
                                         gridViewListaClientesRecord.placa,
                                         style: FlutterFlowTheme.of(context)
@@ -224,7 +154,7 @@ class _ListadoClienteWidgetState extends State<ListadoClienteWidget> {
                                   ),
                                 ),
                                 Align(
-                                  alignment: AlignmentDirectional(0.0, 1.0),
+                                  alignment: AlignmentDirectional(0, 1),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.max,
                                     mainAxisAlignment:
@@ -255,12 +185,11 @@ class _ListadoClienteWidgetState extends State<ListadoClienteWidget> {
                                           Icons.border_color,
                                           color: FlutterFlowTheme.of(context)
                                               .primary,
-                                          size: 40.0,
+                                          size: 40,
                                         ),
                                       ),
                                       Align(
-                                        alignment:
-                                            AlignmentDirectional(0.0, 0.0),
+                                        alignment: AlignmentDirectional(0, 0),
                                         child: InkWell(
                                           splashColor: Colors.transparent,
                                           focusColor: Colors.transparent,
@@ -274,7 +203,7 @@ class _ListadoClienteWidgetState extends State<ListadoClienteWidget> {
                                           child: Icon(
                                             Icons.delete,
                                             color: Color(0xFFD00000),
-                                            size: 40.0,
+                                            size: 40,
                                           ),
                                         ),
                                       ),
